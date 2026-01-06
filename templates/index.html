@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>{{ labels.page_title }}</title>
+
+    
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Language Selector -->
+    <div class="lang-box">
+        <form action="/set_language" method="post">
+            <select name="language" onchange="this.form.submit()">
+                <option value="en" {% if language == "en" %}selected{% endif %}>English</option>
+                <option value="hi" {% if language == "hi" %}selected{% endif %}>हिंदी</option>
+                <option value="te" {% if language == "te" %}selected{% endif %}>తెలుగు</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Title -->
+    <h1>{{ labels.page_title }}</h1>
+
+    <!-- Main Form -->
+    <form action="/recommend" method="post">
+
+        <label>{{ labels.skills }}</label>
+        <input type="text" name="skills" placeholder="eg: python, excel" required>
+
+        <label>{{ labels.sector }}</label>
+        <input type="text" name="sector" placeholder="eg: IT, Marketing" required>
+
+        <label>{{ labels.location }}</label>
+        <input type="text" name="location" placeholder="eg: Hyderabad, Remote" required>
+
+        <button type="submit">{{ labels.submit }}</button>
+    </form>
+
+</div>
+
+</body>
+</html>
