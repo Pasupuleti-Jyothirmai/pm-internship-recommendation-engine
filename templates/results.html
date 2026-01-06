@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>{{ labels.title }}</title>
+
+    
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>{{ labels.title }}</h2>
+
+    {% for rec in recommendations %}
+    <div class="card">
+        <div class="row"><span class="label">{{ labels.role }}:</span> {{ rec.profile }}</div>
+        <div class="row"><span class="label">{{ labels.skills }}:</span> {{ rec.skills }}</div>
+        <div class="row"><span class="label">{{ labels.location }}:</span> {{ rec.location }}</div>
+        <div class="row"><span class="label">{{ labels.education }}:</span> {{ rec.education }}</div>
+    </div>
+    {% endfor %}
+
+    <a href="/" class="back-btn">← Back</a>
+
+</div>
+
+</body>
+</html>
