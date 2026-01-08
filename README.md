@@ -54,3 +54,20 @@ pm-internship-recommendation-engine/
 ##  Author
 **Jyothirmai Pasupuleti**  
 Third Year Student – AI / ML
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Recommendations Page
+![Results 1](screenshots/results1.png)
+![Results 2](screenshots/results2.png)
+
+##  About the Project
+
+This AI-based Internship Recommendation Engine helps students find relevant internships 
+based on their skills, preferred domain, and location.
+
+The system uses Natural Language Processing (NLP) and Machine Learning techniques 
+to match user input with internship listings and provide personalized recommendations.
